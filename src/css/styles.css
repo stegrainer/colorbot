@@ -235,7 +235,9 @@ footer {
 	.controls a { flex-grow: 1; line-height: 2.5; text-align: center; }
 	.primary { height: 80%; }
 	.content { margin: 0 auto; padding: 1.5em 0; width: 90%; }
-	label { font-size: 75%; }
+	.content img { width: 40%; }
+	p, label { font-size: 75%; }
+	p, .field { margin-bottom: 0.75em; }
 	.grades { height: 20%; }
 	.grades ul { flex-direction: row; min-height: 5em; }
 	.grades li { width: 25%; }

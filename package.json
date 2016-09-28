@@ -1,0 +1,16 @@
+{
+  "name": "color-bot",
+  "version": "0.0.1",
+  "description": "A web-based tool for converting colors and saving palettes",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://stegrainer@bitbucket.org/stegrainer/color-bot.git"
+  },
+  "author": "Ste Grainer",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}

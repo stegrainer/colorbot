@@ -1,0 +1,276 @@
+/* -------------------------------------------------
+	THANK YOU FOR THE AWESOME CSS RESET, ERIC MEYER!
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block; }
+body {
+	line-height: 1; }
+ol, ul {
+	list-style: none; }
+blockquote, q {
+	quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none; }
+table {
+	border-collapse: collapse;
+	border-spacing: 0; }
+input {
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+:focus {
+	outline: none; }
+
+/* ==========================================================================
+	General
+========================================================================== */
+
+* {
+	box-sizing: border-box; }
+body, input[type="text"], button[type="submit"] {
+	color: #fff;
+	font-family: 'Open Sans','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	line-height: 1.5; }
+h1 {
+	letter-spacing: -1px; }
+p {
+	margin: 0 0 1.5em; }
+h1, strong {
+	font-weight: 800; }
+a {
+	color: #fff;
+	text-decoration: none; }
+input {
+	text-align: center; }
+label {
+	display: block;
+	padding: 0.25em 0; }
+input {
+	transition: background 0.25s ease-in-out; }
+input[type="text"] {
+	background: rgba(255,255,255,0.1);
+	border: none;
+	border-bottom: 2px solid rgba(0,0,0,0.15);
+	color: #fff;
+	line-height: 1.5;
+	padding: 0.25em 0;
+	width: 100%; }
+input[type="text"].changed {
+	background: rgba(255,255,255,0.65);
+	color: #333;
+	text-shadow: none; }
+input[type="text"]:hover {
+	background: rgba(255,255,255,0.2); }
+input[type="text"]:focus {
+	background: rgba(255,255,255,0.85);
+	color: #000;
+	text-shadow: none; }
+button[type="submit"] {
+	background: rgba(0,0,0,0.2);
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 100%;
+	line-height: 1.5;
+	margin: 0.5em 0.5em 0.5em 0;
+	padding: 0.75em 1.5em;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 0 3px rgba(0,0,0,0.5); }
+button[type="submit"]:disabled {
+	cursor: default;
+	opacity: 0.25; }
+button[type="submit"]:not(:disabled):hover, button[type="submit"]:not(:disabled):focus {
+	background: rgba(0,0,0,0.5); }
+
+/* ==========================================================================
+	Layout
+========================================================================== */
+
+#palette:not(:empty) {
+	box-shadow: 0 0.25em 0 rgba(0,0,0,0.1); }
+.skip {
+	background: #333;
+	color: #fff;
+	display: block;
+	padding: 0.5em;
+	text-align: center; }
+.skip:focus {
+	position: relative;
+	z-index: 13; }
+.palette {
+	background: #333; }
+.palette li {
+	position: relative; }
+.show {
+	bottom: 0;
+	display: block;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 11; }
+.show:hover, .show:focus, .grades a:hover, .grades a:focus {
+	border: 5px solid #fff;
+	opacity: 0.75; }
+.remove {
+	border-radius: 3px;
+	display: inline-block;
+	opacity: 0.5;
+	position: absolute;
+	z-index: 12; }
+.remove:after, .remove:before {
+	background: #fff;
+	content: '';
+	height: 0.2em;
+	left: 10%;
+	margin-top: -0.125em;
+	position: absolute;
+	top: 50%;
+	width: 80%; }
+.remove:after {
+	transform: rotate(45deg); }
+.remove:before {
+	transform: rotate(-45deg); }
+.remove:hover, .remove:focus {
+	background: rgba(0,0,0,0.5);
+	opacity: 1; }
+.controls {
+	display: flex; }
+.controls a {
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	color: #999;
+	display: block; }
+.controls a:hover, .controls a:focus {
+	background: rgba(255,255,255,0.15);
+	color: #fff; }
+.picker.black, .picker.black input[type="text"], .picker.black footer a {
+	color: #000; }
+.picker.black input[type="text"] {
+	text-shadow: none; }
+.content {
+	text-align: center; }
+.content img {
+	display: block;
+	height: auto;
+	margin: 0 auto 0.5em;
+	max-width: 10em;
+	width: 60%; }
+footer {
+	font-size: 75%;
+	margin-top: 1.5em; }
+#share, footer a {
+	border-radius: 3px;
+	display: inline-block;
+	padding: 0.75em; }
+#share {
+	background: rgba(0,0,0,0.33);
+	color: #fff;
+	display: block;
+	margin: 0.75em auto;
+	max-width: 80%;
+	overflow: hidden;
+	text-align: center; }
+#share:hover, #share:focus, footer a:hover, footer a:focus {
+	background: rgba(0,0,0,0.67); }
+.picker.black footer a:hover, .picker.black footer a:focus {
+	color: #fff; }
+.field {
+	margin-bottom: 1.5em; }
+.actions {
+	text-align: center; }
+.grades ul {
+	display: flex; }
+.grades li {
+	position: relative; }
+.grades a {
+	align-items: center;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0; }
+.grades span {
+	background: rgba(255,255,255,0.33);
+	border-radius: 0.5em;
+	color: #333;
+	display: inline-block;
+	padding: 0.5em; }
+.grades a:hover, .grades a:focus {
+	background: rgba(0,0,0,0.5); }
+.grades a:hover span, .grades a:focus span {
+	background: rgba(255,255,255,0.67); }
+
+/* ==========================================================================
+	Media Queries
+========================================================================== */
+
+@media screen and (max-width: 39.9375em) {
+	body, input[type="text"] { font-size: calc(1em + 1vw); }
+	h1 { font-size: 150%; }
+	.palette li { height: 2.5em; }
+	.remove { height: 1.5em; right: 0.5em; top: 0.5em; width: 1.5em; }
+	.controls { flex-flow: row nowrap; }
+	.controls a { flex-grow: 1; line-height: 2.5; text-align: center; }
+	.primary { height: 80%; }
+	.content { margin: 0 auto; padding: 1.5em 0; width: 90%; }
+	label { font-size: 75%; }
+	.grades { height: 20%; }
+	.grades ul { flex-direction: row; min-height: 5em; }
+	.grades li { width: 25%; }
+	.grades a { min-height: 5em; }
+	.grades span { font-size: 75%; }
+}
+
+@media screen and (min-width: 40em) {
+	body, input[type="text"] { font-size: calc(0.5em + 1vw); }
+	h1 { font-size: 200%; }
+	.page, #picker, .picker, #palette:not(:empty), .palette { bottom: 0; left: 0; position: absolute; right: 0; }
+	.page, #palette:empty + #picker, .picker, #palette:not(:empty), .palette { top: 0; }
+	#palette:not(:empty) { bottom: 85%; z-index: 10; }
+	#palette:not(:empty) + #picker { height: 85%; z-index: 9; }
+	.palette, .palette ul { display: flex; flex-flow: row nowrap; }
+	.remove { height: 1em; right: 0.33em; top: 0.33em; width: 1em; }
+	.controls { flex-flow: column nowrap; }
+	.palette ul li, .controls a { flex-grow: 1; }
+	.controls a { align-items: center; display: flex; justify-content: center; text-align: center; }
+	.picker section { position: relative; }
+	.content { left: 10%; position: absolute; top: 50%; transform: translateY(-50%); width: 80%; }
+	.picker { display: flex; left: 0; }
+	.primary, .palette ul { width: 80%; }
+	.grades, .controls { width: 20%; }
+	.grades ul { bottom: 0; flex-direction: column; left: 0; position: absolute; right: 0; top: 0; }
+	.grades li { height: 25%; }
+	[accesskey]:after { background: rgba(0,0,0,0.67); border-radius: 3px; color: #fff; content: attr(accesskey);
+		display: inline-block; font-size: 75%; font-weight: 800; margin: 0 0 0 0.5em; padding: 0 0.5em; }
+	label[accesskey]:after { font-size: 100%; }
+	[accesskey]:hover:after, [accesskey]:focus:after { background: #fff; color: #333; text-shadow: none; }
+}
+
+@media screen and (min-width: 60em) {
+	h1 { font-size: 250%; }
+	.field { float: left; width: 32%; }
+	.field:nth-of-type(1), .field:nth-of-type(2) { margin-right: 2%; }
+	label, .grades span { font-size: 75%; }
+}

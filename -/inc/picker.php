@@ -96,13 +96,14 @@
 					<input type="text" name="hsl" id="hsl" value="<?= $color['hsl'] ?>">
 				</div>
 				<div class="actions">
-					<button type="submit" name="convert" value="1" accesskey="C">convertColor()</button>
-					<button type="submit" name="add" value="1" accesskey="A">addToPalette()</button>
-					<button type="submit" name="randomize" value="1" accesskey="R">randomColor()</button>
+					<button type="submit" name="convert" value="1" accesskey="C" aria-label="Convert the selected color">convertColor()</button>
+					<button type="submit" name="add" value="1" accesskey="A" aria-label="Add this color to your palette">addToPalette()</button>
+					<button type="submit" name="randomize" value="1" accesskey="R" aria-label="Generate a new random color">randomColor()</button>
 				</div>
 			</form>
 			<footer>
 				<a href="https://stegrainer.com">Made with care by Ste Grainer</a>
+				<a href="https://stegrainer.com/contact/">Submit feedback</a>
 			</footer>
 		</div>
 	</section>

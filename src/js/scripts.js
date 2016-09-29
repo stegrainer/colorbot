@@ -45,8 +45,8 @@ function colorbot() {
 		};
 	}
 	
-	var webfont = document.querySelectorAll("[rel='preload']");
-	webfont.rel = 'stylesheet';	
+	var webfont = document.querySelector("[rel='preload']");
+	webfont.rel = 'stylesheet';
 	
 	var colorInputs = document.querySelectorAll("#picker input[type='text']");
 	for(i=0; i<colorInputs.length; i++) {

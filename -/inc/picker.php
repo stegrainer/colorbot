@@ -62,7 +62,7 @@
 			<h1><?= $yay[$pickOne] ?></h1>
 			<p>
 				<?= $par[$pickOne] ?><br />
-				<a href="<?= $shareLink ?>" id="share"><?= $shareLink ?></a>
+				<a href="<?= $shareLink ?>" id="share" title="Copy this URL to share your color palette"><?= $shareLink ?></a>
 			</p>
 		<? else: ?>
 			<? if($intro): ?>
@@ -85,15 +85,15 @@
 				
 				<div class="field">
 					<label for="hex" accesskey="H">Hexadecimal</label>
-					<input type="text" name="hex" id="hex" value="<?= $color['hex'] ?>" maxlength="7">
+					<input type="text" name="hex" id="hex" value="<?= $color['hex'] ?>" maxlength="7" aria-label="Edit the Hexadecimal value">
 				</div>
 				<div class="field">
 					<label for="rgb" accesskey="G">RGBa</label>
-					<input type="text" name="rgb" id="rgb" value="<?= $color['rgb'] ?>">
+					<input type="text" name="rgb" id="rgb" value="<?= $color['rgb'] ?>" aria-label="Edit the Red, Green, and Blue values">
 				</div>
 				<div class="field">
 					<label for="hsl" accesskey="L">HSLa</label>
-					<input type="text" name="hsl" id="hsl" value="<?= $color['hsl'] ?>">
+					<input type="text" name="hsl" id="hsl" value="<?= $color['hsl'] ?>" aria-label="Edit the Hue, Saturation, and Lightness values">
 				</div>
 				<div class="actions">
 					<button type="submit" name="convert" value="1" accesskey="C" aria-label="Convert the selected color">convertColor()</button>

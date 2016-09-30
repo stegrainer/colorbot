@@ -31,7 +31,7 @@ function colorbot() {
 	} else {
 		logo = 'colorbot-b.svg';
 	}
-	loadImg('-/img/'+logo,'Hello, I&rsquo;m ColorBot','logo');
+	loadImg('-/img/'+logo,"Hello, I'm ColorBot",'logo');
 	
 	var clrLinks = document.getElementsByClassName('warn');
 	for(var i=0; i<clrLinks.length; i++) {

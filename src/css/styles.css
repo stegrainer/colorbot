@@ -258,7 +258,7 @@ footer {
 	.palette ul li, .controls a { flex-grow: 1; }
 	.controls a { align-items: center; display: flex; justify-content: center; text-align: center; }
 	.picker section { position: relative; }
-	.content { left: 10%; position: absolute; top: 50%; transform: translateY(-50%); width: 80%; }
+	.content { left: 5%; position: absolute; top: 50%; transform: translateY(-50%); width: 90%; }
 	.picker { display: flex; left: 0; }
 	.primary, .palette ul { width: 80%; }
 	.grades, .controls { width: 20%; }
@@ -270,7 +270,16 @@ footer {
 	[accesskey]:hover:after, [accesskey]:focus:after { background: #fff; color: #333; text-shadow: none; }
 }
 
+@media screen and (min-width: 40em) and (max-width: 59.9375em) {
+	button[type="submit"] { padding: 0.75em; }
+	.content img { display: none; }
+	.field { margin-bottom: 0.75em; }
+	.field:nth-of-type(1), .field:nth-of-type(2) { float: left; width: 48%; }
+	.field:nth-of-type(1) { margin-right: 4%; }
+}
+
 @media screen and (min-width: 60em) {
+	.content { left: 10%; width: 80%; }
 	h1 { font-size: 250%; }
 	.field { float: left; width: 32%; }
 	.field:nth-of-type(1), .field:nth-of-type(2) { margin-right: 2%; }
